@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krystal - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/logo.png" alt="Krystal Logo" class="logo-img">
+            </div>
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li class="dropdown">
+                        <ul class="dropdown-menu">
+                            <li><a href="products/product-gallery.html">Product Gallery</a></li>
+                            <li><a href="products/corporate.html">Corporate</a></li>
+                            <li><a href="products/personalised.html">Personalised</a></li>
+                            <li><a href="products/trophies.html">Trophies</a></li>
+                            <li><a href="products/miniatures.html">Miniatures</a></li>
+                            <li><a href="products/spiritual.html">Spiritual</a></li>
+                            <li><a href="products/surface-printing.html">Surface Printing</a></li>
+                            <li><a href="products/light-base.html">Light Base</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="festivals.html">Festivals</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                    <li><a href="admin/login.html">Admin</a></li>
+                </ul>
+            </nav>
+            <div class="burger-menu" id="burgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="hero-content">
+            <div class="hero-logo">
+                <img src="assets/logo.png" alt="Krystal" class="hero-logo-img">
+            </div>
+            <h1 class="hero-title">KRYSTAL</h1>
+            <p class="hero-subtitle">Transform your memories into eternal crystal masterpieces</p>
+            <button class="cta-button">Explore Our Universe</button>
+        </div>
+    </section>
+
+   <!-- Simple Auto-play Video Section -->
+    <section class="video-section" id="video-section">
+        <div class="container">
+            <h2 class="section-title">See Our Craftsmanship</h2>
+            <div class="video-container">
+                <iframe 
+                    id="youtubeVideo"
+                    src="https://www.youtube.com/embed/TSXYE4VP3OE?loop=1&playlist=TSXYE4VP3OE&mute=1&autoplay=1&enablejsapi=1"
+                    data-src="https://www.youtube.com/embed/TSXYE4VP3OE?loop=1&playlist=TSXYE4VP3OE&mute=1&autoplay=1&enablejsapi=1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    class="youtube-video">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scrolling Products Showcase Section -->
+    <section class="products-showcase">
+        <div class="container">
+            <div class="showcase-header">
+                <h2>Discover Our Masterpieces</h2>
+                <p>Each crystal tells a story of precision, elegance, and timeless beauty</p>
+            </div>
+            
+            <div class="showcase-items">
+                <!-- Product 1 - Image Left, Text Right -->
+                <div class="showcase-item" data-animation="slide-right">
+                    <div class="showcase-image">
+                        <img src="assets/2.png" alt="Corporate Crystal Award" loading="lazy">
+                    </div>
+                    <div class="showcase-content">
+                        <div class="showcase-category">Corporate Excellence</div>
+                        <h3>Premium Crystal Awards</h3>
+                        <p>Recognize outstanding achievements with our meticulously crafted crystal awards. Each piece reflects the brilliance of success and the clarity of excellence, making every recognition moment truly memorable.</p>
+                        <div class="showcase-features">
+                            <span class="feature">✨ Premium Quality</span>
+                            <span class="feature">🏆 Custom Engraving</span>
+                            <span class="feature">💎 Crystal Clear</span>
+                        </div>
+                        <a href="products/corporate.html" class="showcase-btn">Explore Collection</a>
+                    </div>
+                </div>
+
+                <!-- Product 2 - Text Left, Image Right -->
+                <div class="showcase-item reverse" data-animation="slide-left">
+                    <div class="showcase-content">
+                        <div class="showcase-category">Personal Touch</div>
+                        <h3>Personalised Keepsakes</h3>
+                        <p>Transform precious memories into eternal crystal treasures. Our personalised collection captures life's most beautiful moments in stunning crystal clarity, creating heirlooms that last forever.</p>
+                        <div class="showcase-features">
+                            <span class="feature">💝 Personal Engraving</span>
+                            <span class="feature">📸 Photo Crystals</span>
+                            <span class="feature">❤️ Memory Preservation</span>
+                        </div>
+                        <a href="products/personalised.html" class="showcase-btn">Create Your Memory</a>
+                    </div>
+                    <div class="showcase-image">
+                        <img src="assets/3.png" alt="Personalised Crystal" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Product 3 - Image Left, Text Right -->
+                <div class="showcase-item" data-animation="slide-right">
+                    <div class="showcase-image">
+                        <img src="assets/4.png" alt="Crystal Trophy" loading="lazy">
+                    </div>
+                    <div class="showcase-content">
+                        <div class="showcase-category">Victory & Achievement</div>
+                        <h3>Championship Trophies</h3>
+                        <p>Celebrate victories with our prestigious crystal trophies. Designed to honor champions and commemorate achievements, each trophy embodies the spirit of triumph and excellence.</p>
+                        <div class="showcase-features">
+                            <span class="feature">🏅 Championship Grade</span>
+                            <span class="feature">⚡ Lightning Fast Delivery</span>
+                            <span class="feature">🎯 Precision Crafted</span>
+                        </div>
+                        <a href="products/trophies.html" class="showcase-btn">View Trophies</a>
+                    </div>
+                </div>
+
+                <!-- Product 4 - Text Left, Image Right -->
+                <div class="showcase-item reverse" data-animation="slide-left">
+                    <div class="showcase-content">
+                        <div class="showcase-category">Spiritual Harmony</div>
+                        <h3>Sacred Crystal Collection</h3>
+                        <p>Discover inner peace with our spiritual crystal collection. Each piece is carefully selected and crafted to enhance meditation, promote positive energy, and create harmonious spaces.</p>
+                        <div class="showcase-features">
+                            <span class="feature">🧘 Meditation Ready</span>
+                            <span class="feature">✨ Positive Energy</span>
+                        </div>
+                        <a href="products/spiritual.html" class="showcase-btn">Find Your Peace</a>
+                    </div>
+                    <div class="showcase-image">
+                        <img src="assets/5.png" alt="Spiritual Crystal" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Products Categories -->
+    <section class="products-categories" id="products">
+        <div class="container">
+            <h2 class="section-title">Our Product Categories</h2>
+            <p class="section-subtitle">Discover our premium crystal collections crafted with precision and artistry</p>
+            
+            <div class="categories-grid">
+                <div class="category-card" onclick="location.href='products/product-gallery.html'">
+                    <div class="category-image">
+                        <div class="category-icon">🖼️</div>
+                        <div class="category-glow"></div>
+                    </div>
+                    <div class="category-content">
+                        <h3>Product Gallery</h3>
+                        <p>Browse our complete collection of premium crystals</p>
+                        <span class="view-more">View Products →</span>
+                    </div>
+                </div>
+                
+                <div class="category-card featured" onclick="location.href='products/corporate.html'">
+                    <div class="category-image">
+                        <div class="category-icon">🏆</div>
+                        <div class="category-glow"></div>
+                        <div class="featured-badge">Most Popular</div>
+                    </div>
+                    <div class="category-content">
+                        <h3>Corporate</h3>
+                        <p>Awards & business gifts for professional recognition</p>
+                        <span class="view-more">View Products →</span>
+                    </div>
+                </div>
+                
+                <div class="category-card" onclick="location.href='products/personalised.html'">
+                    <div class="category-image">
+                        <div class="category-icon">💝</div>
+                        <div class="category-glow"></div>
+                    </div>
+                    <div class="category-content">
+                        <h3>Personalised</h3>
+                        <p>Custom engraved memories for special moments</p>
+                        <span class="view-more">View Products →</span>
+                    </div>
+                </div>
+                
+                <div class="category-card" onclick="location.href='products/trophies.html'">
+                    <div class="category-image">
+                        <div class="category-icon">🥇</div>
+                        <div class="category-glow"></div>
+                    </div>
+                    <div class="category-content">
+                        <h3>Trophies</h3>
+                        <p>Recognition & achievements for winners</p>
+                        <span class="view-more">View Products →</span>
+                    </div>
+                </div>
+                
+                <div class="category-card" onclick="location.href='products/miniatures.html'">
+                    <div class="category-image">
+                        <div class="category-icon">🔮</div>
+                        <div class="category-glow"></div>
+                    </div>
+                    <div class="category-content">
+                        <h3>Miniatures</h3>
+                        <p>Delicate crystal figurines and artistic pieces</p>
+                        <span class="view-more">View Products →</span>
+                    </div>
+                </div>
+                
+                <div class="category-card" onclick="location.href='products/spiritual.html'">
+                    <div class="category-image">
+                        <div class="category-icon">🛐</div>
+                        <div class="category-glow"></div>
+                    </div>
+                    <div class="category-content">
+                        <h3>Spiritual</h3>
+                        <p>Religious & spiritual items for divine blessings</p>
+                        <span class="view-more">View Products →</span>
+                    </div>
+                </div>
+                
+                <div class="category-card" onclick="location.href='products/surface-printing.html'">
+                    <div class="category-image">
+                        <div class="category-icon">🎨</div>
+                        <div class="category-glow"></div>
+                    </div>
+                    <div class="category-content">
+                        <h3>Surface Printing</h3>
+                        <p>Printed crystal designs with vibrant colors</p>
+                        <span class="view-more">View Products →</span>
+                    </div>
+                </div>
+                
+                <div class="category-card" onclick="location.href='products/light-base.html'">
+                    <div class="category-image">
+                        <div class="category-icon">💡</div>
+                        <div class="category-glow"></div>
+                    </div>
+                    <div class="category-content">
+                        <h3>Light Base</h3>
+                        <p>LED illuminated bases to showcase your crystals</p>
+                        <span class="view-more">View Products →</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Clients Section -->
+    <section class="clients-section" id="clients">
+        <div class="container">
+            <h2 class="section-title">Trusted by Industry Leaders</h2>
+            <div class="clients-scroll">
+                <div class="clients-track">
+                    <img src="assets/clients/indianarmy.jpg" alt="Client 1">
+                    <img src="assets/clients/indiannavy.png" alt="Client 2">
+                    <img src="assets/clients/govmaha.png" alt="Client 3">
+                    <img src="assets/clients/adityabir.jpeg" alt="Client 4">
+                    <img src="assets/clients/CNBC.png" alt="Client 5">
+                    <img src="assets/clients/Jawa.png" alt="Client 6">
+                    <img src="assets/clients/DB2019AL01950_medium.jpg" alt="Client 6">
+                    <img src="assets/clients/MITADT.png" alt="Client 6">
+                    <img src="assets/clients/One_Avighna_Park_Corporate_Logo.jpg" alt="Client 6">
+                    <img src="assets/clients/5.jpg" alt="Client 6">
+                    <img src="assets/clients/statue-of-unity.jpg" alt="Client 6">
+                    <img src="assets/clients/spicejet (1).png" alt="Client 6">
+                    <!-- Duplicate for seamless loop -->
+                    <img src="assets/clients/indianarmy.jpg" alt="Client 1">
+                    <img src="assets/clients/indiannavy.png" alt="Client 2">
+                    <img src="assets/clients/govmaha.png" alt="Client 3">
+                    <img src="assets/clients/adityabir.jpeg" alt="Client 4">
+                    <img src="assets/clients/CNBC.png" alt="Client 5">
+                    <img src="assets/clients/Jawa.png" alt="Client 6">
+                    <img src="assets/clients/DB2019AL01950_medium.jpg" alt="Client 6">
+                    <img src="assets/clients/MITADT.png" alt="Client 6">
+                    <img src="assets/clients/One_Avighna_Park_Corporate_Logo.jpg" alt="Client 6">
+                    <img src="assets/clients/5.jpg" alt="Client 6">
+                    <img src="assets/clients/statue-of-unity.jpg" alt="Client 6">
+                    <img src="assets/clients/spicejet (1).png" alt="Client 6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="assets/logo.png" alt="Krystal Logo">
+                    </div>
+                    <p>Premium crystal engraving and trophy manufacturing. Creating memories that last forever.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li>3D Crystal Engraving</li>
+                        <li>Trophy Manufacturing</li>
+                        <li>Crystal Miniatures</li>
+                        <li>LED Light Bases</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📧 krystal.bom@gmail.com</p>
+                    <p>📱 +91 6269786110</p>
+                    <p>📍 44/B, Bombay Timber Market, Reay Road, Mumbai-10</p>
+                    <p><a href="admin/login.html">Admin Login</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Krystal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

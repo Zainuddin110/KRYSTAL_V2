@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival Collections - Krystal</title>
+    <link rel="stylesheet" href="festivals.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/logo.png" alt="Krystal Logo" class="logo-img">
+                </a>
+            </div>
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#products">All Products</a></li>
+                    <li><a href="festivals.html" class="active">Festivals</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="burger-menu" id="burgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-content">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <span>Festival Collections</span>
+            </div>
+            <h1 class="page-title">🎉 Festivals</h1>
+            <p class="page-subtitle">Celebrate every moment with our special crystal collections</p>
+        </div>
+    </section>
+
+    <!-- Festivals Section -->
+    <section class="festivals-section">
+        <div class="container">
+            
+            <!-- Festival Card 1 - Empty Template -->
+            <div class="festival-card" id="festival1">
+                <div class="festival-banner">
+                    <img src="Orange and Beige Ganesh Chaturthi Sale Banner.png" alt="Festival Banner" class="festival-image">
+                    <div class="festival-overlay">
+                        <div class="festival-info">
+                            <h2 class="festival-title">Ganesh Chaturthi</h2>
+                            <p class="festival-description">Add your festival description here</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="festival-products">
+                    <div class="products-grid">
+                        <!-- Product 1 -->
+                        <div class="product-item">
+                            <img src="assets/products/placeholder-product.jpg" alt="Product">
+                            <h4>Product Name</h4>
+                        </div>
+                        <!-- Product 2 -->
+                        <div class="product-item">
+                            <img src="assets/products/placeholder-product.jpg" alt="Product">
+                            <h4>Product Name</h4>
+                        </div>
+                        <!-- Product 3 -->
+                        <div class="product-item">
+                            <img src="assets/products/placeholder-product.jpg" alt="Product">
+                            <h4>Product Name</h4>
+                        </div>
+                        <!-- Product 4 -->
+                        <div class="product-item">
+                            <img src="assets/products/placeholder-product.jpg" alt="Product">
+                            <h4>Product Name</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Festival Card 2 - Empty Template -->
+            <div class="festival-card" id="festival2">
+                <div class="festival-banner">
+                    <img src="Green and Beige Contemporary and Illustrated Eid Milad Un Nabi Greeting Banner (1).png" alt="Festival Banner" class="festival-image">
+                    <div class="festival-overlay">
+                        <div class="festival-info">
+                            <h2 class="festival-title">Eid-E-Milad Un Nabi</h2>
+                            <p class="festival-description">Add your festival description here</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="festival-products">
+                    <div class="products-grid">
+                        <!-- Product 1 -->
+                        <div class="product-item">
+                            <img src="assets/products/placeholder-product.jpg" alt="Product">
+                            <h4>Product Name</h4>
+                        </div>
+                        <!-- Product 2 -->
+                        <div class="product-item">
+                            <img src="assets/products/placeholder-product.jpg" alt="Product">
+                            <h4>Product Name</h4>
+                        </div>
+                        <!-- Product 3 -->
+                        <div class="product-item">
+                            <img src="assets/products/placeholder-product.jpg" alt="Product">
+                            <h4>Product Name</h4>
+                        </div>
+                        <!-- Product 4 -->
+                        <div class="product-item">
+                            <img src="assets/products/placeholder-product.jpg" alt="Product">
+                            <h4>Product Name</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/logo.png" alt="Krystal Logo">
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="product-gallery.html">All Products</a>
+                    <a href="festivals.html">Festivals</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Krystal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const burgerMenu = document.getElementById('burgerMenu');
+        const navMenu = document.getElementById('navMenu');
+
+        if (burgerMenu && navMenu) {
+            burgerMenu.addEventListener('click', () => {
+                burgerMenu.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>
