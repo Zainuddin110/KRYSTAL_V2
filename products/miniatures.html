@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miniatures Products - Krystal</title>
+    <link rel="stylesheet" href="products.css">
+</head>
+<body data-category="miniatures">
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/logo.png" alt="Krystal Logo" class="logo-img">
+                </a>
+            </div>
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#products">All Products</a></li>
+                    <li><a href="../about-us.html">About Us</a></li>
+                    <li><a href="../contact-us.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="burger-menu" id="burgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-content">
+            <div class="breadcrumb">
+                <a href="../index.html">Home</a> / <span>Miniatures</span>
+            </div>
+            <h1 class="page-title">Miniatures</h1>
+            <p class="page-subtitle">Premium crystal awards and branded products for businesses</p>
+        </div>
+    </section>
+
+    <!-- Products Controls -->
+    <section class="products-controls">
+        <div class="container">
+            <div class="controls-wrapper">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search Miniatures products..." class="search-input">
+                    <span class="search-icon">🔍</span>
+                </div>
+                <div class="products-info">
+                    <span class="product-count">Showing <span id="currentCount">0</span> of <span id="totalCount">0</span> products</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <!-- Loading Spinner -->
+            <div class="loading-spinner" id="loadingSpinner">
+                <div class="spinner"></div>
+                <p>Loading Miniatures products...</p>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here by products.js -->
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination-wrapper" id="paginationWrapper" style="display: none;">
+                <nav class="pagination">
+                    <button class="pagination-btn" id="prevBtn" disabled>
+                        <span>‹</span> Previous
+                    </button>
+                    <div class="pagination-numbers" id="paginationNumbers">
+                        <!-- Page numbers will be inserted here -->
+                    </div>
+                    <button class="pagination-btn" id="nextBtn" disabled>
+                        Next <span>›</span>
+                    </button>
+                </nav>
+            </div>
+
+            <!-- No Products Message -->
+            <div class="no-products" id="noProducts" style="display: none;">
+                <div class="no-products-content">
+                    <div class="no-products-icon">📦</div>
+                    <h3>No Miniatures Products Found</h3>
+                    <p>We're working on adding more Miniatures crystal products. Please check back later.</p>
+                    <a href="../contact-us.html" class="contact-btn">Contact for Custom Orders</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Modal -->
+    <div class="product-modal" id="productModal">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="">
+                </div>
+                <div class="modal-info">
+                    <h3 id="modalTitle"></h3>
+                    <p id="modalDescription"></p>
+                    <div class="modal-category">
+                        <span class="category-badge" id="modalCategory"></span>
+                    </div>
+                    <div class="modal-actions">
+                        <a href="../contact-us.html" class="inquiry-btn">Send Inquiry</a>
+                        <button class="share-btn" onclick="shareProduct()">Share Product</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2>Need Miniatures Solutions?</h2>
+            <p>Get in touch for bulk orders and custom requirements</p>
+            <div class="contact-buttons">
+                <a href="tel:+916269786110" class="contact-btn">📞 Call Now</a>
+                <a href="mailto:krystal.bom@gmail.com" class="contact-btn">📧 Email</a>
+                <a href="https://wa.me/916269786110" class="contact-btn">💬 WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../assets/logo.png" alt="Krystal Logo">
+                </div>
+                <div class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="product-gallery.html">All Products</a>
+                    <a href="../contact-us.html">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Krystal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="products.js"></script>
+    
+    <script>
+        // Mobile menu toggle
+        const burgerMenu = document.getElementById('burgerMenu');
+        const navMenu = document.getElementById('navMenu');
+
+        if (burgerMenu && navMenu) {
+            burgerMenu.addEventListener('click', () => {
+                burgerMenu.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        // Global modal functions
+        window.showProductModal = function(imageUrl, title, description, category) {
+            const modal = document.getElementById('productModal');
+            const modalImage = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDescription = document.getElementById('modalDescription');
+            const modalCategory = document.getElementById('modalCategory');
+
+            modalImage.src = imageUrl;
+            modalImage.alt = title;
+            modalTitle.textContent = title;
+            modalCategory.textContent = category;
+
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        };
+
+        window.closeProductModal = function() {
+            const modal = document.getElementById('productModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        };
+
+        window.shareProduct = function() {
+            if (navigator.share) {
+                navigator.share({
+                    title: document.getElementById('modalTitle').textContent,
+                    text: 'Check out this Miniatures crystal product from Krystal',
+                    url: window.location.href
+                });
+            } else {
+                // Fallback: copy URL to clipboard
+                navigator.clipboard.writeText(window.location.href).then(() => {
+                    alert('Product link copied to clipboard!');
+                });
+            }
+        };
+
+        // Modal event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('productModal');
+            const modalClose = document.getElementById('modalClose');
+            const modalBackdrop = document.getElementById('modalBackdrop');
+
+            if (modalClose) {
+                modalClose.addEventListener('click', closeProductModal);
+            }
+
+            if (modalBackdrop) {
+                modalBackdrop.addEventListener('click', closeProductModal);
+            }
+
+            // Close modal on Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.classList.contains('active')) {
+                    closeProductModal();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
