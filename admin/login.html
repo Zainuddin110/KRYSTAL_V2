@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Krystal</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <div class="login-header">
+            <img src="../assets/logo.png" alt="Krystal Logo" class="admin-logo">
+            <h1>Admin Login</h1>
+            <p>Manage your crystal products</p>
+        </div>
+        
+        <form class="login-form" id="loginForm">
+            <div class="form-group">
+                <label for="username">Email Address</label>
+                <input type="email" id="username" name="email" placeholder="Enter your email" required>
+                <span class="form-icon">👤</span>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <span class="form-icon">🔒</span>
+            </div>
+            
+            <button type="submit" class="login-btn">Login</button>
+            
+            <div class="login-error" id="loginError" style="display: none;">
+                Invalid username or password
+            </div>
+        </form>
+        
+        <div class="login-footer">
+            <a href="../index.html">← Back to Website</a>
+        </div>
+    </div>
+
+    <script type="module" src="admin.js"></script>
+</body>
+</html>

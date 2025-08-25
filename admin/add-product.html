@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product - Krystal Admin</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-page">
+    <!-- Header -->
+    <header class="admin-header">
+        <div class="admin-nav">
+            <div class="admin-logo-section">
+                <img src="../assets/logo.png" alt="Krystal Logo" class="admin-logo-small">
+                <span class="admin-title">Krystal Admin</span>
+            </div>
+            
+            <nav class="admin-menu" id="adminMenu">
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="add-product.html" class="nav-link active">Add Product</a>
+                <a href="#" class="nav-link" id="logoutBtn">Logout</a>
+            </nav>
+            
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Add Product Form -->
+    <main class="admin-main">
+        <div class="admin-container">
+            <div class="form-header">
+                <h2>Add New Product</h2>
+                <p>Add a new product to your crystal collection</p>
+            </div>
+
+            <div class="form-container">
+                <form class="product-form" id="addProductForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="productName">Product Name *</label>
+                            <input type="text" id="productName" name="product_name" required>
+                            <small>Enter a descriptive name for your product</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="productCategory">Category *</label>
+                            <select id="productCategory" name="category" required>
+                                <option value="">Select Category</option>
+                                <option value="product-gallery">Product Gallery</option>
+                                <option value="corporate">Corporate</option>
+                                <option value="personalised">Personalised</option>
+                                <option value="trophies">Trophies</option>
+                                <option value="miniatures">Miniatures</option>
+                                <option value="spiritual">Spiritual</option>
+                                <option value="surface-printing">Surface Printing</option>
+                                <option value="light-base">Light Base</option>
+                            </select>
+                            <small>Choose the appropriate category</small>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="productImage">Product Image *</label>
+                        <div class="image-upload-area" id="imageUploadArea">
+                            <input type="file" id="productImage" name="image" accept="image/*" required>
+                            <div class="upload-placeholder" id="uploadPlaceholder">
+                                <div class="upload-icon">📸</div>
+                                <p>Click to upload image or drag and drop</p>
+                                <small>JPG, PNG, WebP up to 5MB</small>
+                            </div>
+                            <div class="image-preview" id="imagePreview">
+                                <img id="previewImg" src="" alt="Preview">
+                                <button type="button" class="remove-image" id="removeImage">✕</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="productStatus">Status</label>
+                            <select id="productStatus" name="is_active">
+                                <option value="true">Active (Visible on website)</option>
+                                <option value="false">Inactive (Hidden)</option>
+                            </select>
+                            <small>Active products will be visible on the website</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="productTags">Tags (Optional)</label>
+                            <input type="text" id="productTags" name="tags" placeholder="premium, custom, gift">
+                            <small>Comma-separated tags for better organization</small>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" onclick="resetForm()">Reset Form</button>
+                        <button type="submit" class="btn-primary" id="submitBtn">
+                            <span class="btn-text">Add Product</span>
+                            <span class="btn-loading">Adding...</span>
+                        </button>
+                    </div>
+
+                    <div class="form-message" id="formMessage"></div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Krystal</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-page">
+    <!-- Header -->
+    <header class="admin-header">
+        <div class="admin-nav">
+            <div class="admin-logo-section">
+                <img src="../assets/logo.png" alt="Krystal Logo" class="admin-logo-small">
+                <span class="admin-title">Krystal Admin</span>
+            </div>
+            
+            <nav class="admin-menu" id="adminMenu">
+                <a href="dashboard.html" class="nav-link active">Dashboard</a>
+                <a href="add-product.html" class="nav-link">Add Product</a>
+                <a href="#" class="nav-link" id="logoutBtn">Logout</a>
+            </nav>
+            
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+        <div class="admin-container">
+            <!-- Welcome Section -->
+            <section class="welcome-section">
+                <h1>Welcome to Dashboard</h1>
+                <p>Manage your Krystal products and view analytics</p>
+            </section>
+
+            <!-- Stats Cards -->
+            <section class="stats-section">
+                <h2 class="section-title">Overview</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">📦</div>
+                        <div class="stat-info">
+                            <h3 id="totalProducts">0</h3>
+                            <p>Total Products</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">🏆</div>
+                        <div class="stat-info">
+                            <h3 id="corporateProducts">0</h3>
+                            <p>Corporate</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">💝</div>
+                        <div class="stat-info">
+                            <h3 id="personalProducts">0</h3>
+                            <p>Personalised</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">🏅</div>
+                        <div class="stat-info">
+                            <h3 id="trophyProducts">0</h3>
+                            <p>Trophies</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Actions -->
+            <section class="quick-actions-section">
+                <h2 class="section-title">Quick Actions</h2>
+                <div class="actions-grid">
+                    <a href="add-product.html" class="action-card">
+                        <div class="action-icon">➕</div>
+                        <h3>Add Product</h3>
+                        <p>Add new crystal products</p>
+                    </a>
+                    
+                    <div class="action-card clickable" onclick="refreshData()">
+                        <div class="action-icon">🔄</div>
+                        <h3>Refresh Data</h3>
+                        <p>Update dashboard statistics</p>
+                    </div>
+                    
+                    <a href="../index.html" class="action-card" target="_blank">
+                        <div class="action-icon">🌐</div>
+                        <h3>View Website</h3>
+                        <p>See live website</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Recent Products Table -->
+            <section class="products-section">
+                <div class="section-header">
+                    <h2 class="section-title">Recent Products</h2>
+                    <button class="refresh-btn" onclick="loadProducts()">🔄 Refresh</button>
+                </div>
+                
+                <div class="table-wrapper">
+                    <table class="products-table" id="productsTable">
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="productsTableBody">
+                            <tr>
+                                <td colspan="6" class="loading-cell">Loading products...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script type="module" src="admin.js"></script>
+</body>
+</html>
