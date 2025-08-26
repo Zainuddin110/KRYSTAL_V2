@@ -780,4 +780,5 @@ window.addEventListener('error', function(e) {
     console.error('💥 JavaScript error:', e.error);
 });
 
+
 console.log('🎯 Krystal Admin JS with ES Modules loaded successfully');
