@@ -443,8 +443,8 @@ body {
 
 .clients-track {
     display: flex;
-    gap: 4rem;
-    animation: infiniteScroll 25s linear infinite;
+    gap: 3rem;
+    animation: infiniteScroll 10s linear infinite;
     align-items: center;
 }
 
@@ -1033,7 +1033,7 @@ body {
 
 
 /* Responsive Design */
-@media (min-width: 768px) {
+@media (min-width: 1440px) {
     .nav-menu {
         display: block;
     }
@@ -1303,13 +1303,19 @@ body {
         gap: 2rem;
         text-align: center;
     }
+
+    .product-image img {
+        height: 250px;
+    }
     
     .showcase-item.reverse {
         direction: ltr;
     }
     
     .showcase-image {
-        order: 1;
+        height: 100%;
+        width: 50%;
+        margin: 0 auto;
     }
     
     .showcase-content {
@@ -1331,8 +1337,10 @@ body {
         gap: 4rem;
     }
     
-    .showcase-image img {
-        height: 300px;
+    .showcase-image {
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
     }
     
     .showcase-features {
