@@ -376,7 +376,8 @@ body {
     }
     
     .product-item img {
-        height: 120px;
+        height: auto;
     }
 }
+
 
