@@ -322,7 +322,7 @@ body {
 }
 
 /* Responsive Design */
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .nav-menu {
         display: block !important;
         position: static;
@@ -353,7 +353,7 @@ body {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .page-title {
         font-size: 2.5rem;
     }
@@ -367,7 +367,7 @@ body {
     }
     
     .products-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         gap: 1rem;
     }
     
@@ -379,3 +379,4 @@ body {
         height: 120px;
     }
 }
+
