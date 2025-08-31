@@ -39,7 +39,7 @@ body {
 }
 
 .logo-img {
-    height: 65px;
+    height: 45px;
     width: auto;
     filter: drop-shadow(0 0 10px rgba(69, 123, 191, 0.3));
     transition: transform 0.3s ease;
@@ -193,7 +193,7 @@ body {
 }
 
 .hero-logo-img {
-    height: 120px;
+    height: 140px;
     width: auto;
     filter: drop-shadow(0 0 20px rgba(69, 123, 191, 0.5));
     animation: float 3s ease-in-out infinite;
@@ -1352,4 +1352,5 @@ body {
         font-size: 1rem;
     }
 }
+
 
