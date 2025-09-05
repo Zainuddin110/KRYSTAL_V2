@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Thank You — KRYSTAL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Theme-aligned minimal styles -->
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Times New Roman', serif;
+      background-color:#0a1628;
+      color:#ffffff;
+      overflow-x:hidden;
+      min-height:100vh;
+      display:grid;
+      place-items:center;
+    }
+    .wrap {
+      width: min(720px, 92vw);
+      padding: 2rem;
+    }
+    .card {
+      position: relative;
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+      border: 1px solid rgba(69,123,191,0.2);
+      border-radius: 20px;
+      padding: clamp(24px, 4vw, 40px);
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+      overflow: clip;
+    }
+    .pulse {
+      position:absolute; inset:-40%;
+      background:
+        radial-gradient(500px 300px at 80% 20%, rgba(69,123,191,0.18), transparent 60%),
+        radial-gradient(420px 260px at 20% 80%, rgba(197,40,47,0.14), transparent 60%);
+      filter: blur(22px);
+      pointer-events:none;
+      animation: float 10s ease-in-out infinite alternate;
+    }
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    .logo {
+      margin-bottom: 1.25rem;
+    }
+    .logo img {
+      height: 120px; width:auto;
+      filter: drop-shadow(0 0 20px rgba(69,123,191,0.5));
+      animation: logoFloat 3s ease-in-out infinite;
+    }
+    @keyframes logoFloat {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    h1 {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      margin-bottom: .5rem;
+      color:#457bbf;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      font-weight:bold;
+    }
+    .lead {
+      font-size: clamp(1rem, 2.6vw, 1.15rem);
+      color:#e8e8e8;
+      margin-bottom: 1.25rem;
+      line-height:1.6;
+    }
+    .quote {
+      margin-top: .5rem;
+      color:#e0e0e0;
+      font-style: italic;
+      line-height:1.6;
+    }
+    .accent {
+      display:inline-block;
+      height:4px; width:120px;
+      margin: 1rem auto 0;
+      border-radius:2px;
+      background: linear-gradient(45deg, #C5282F, #457bbf);
+    }
+    .note {
+      margin-top: 1rem;
+      color:#a0a0a0;
+      font-size:.95rem;
+    }
+    a.sr-only {
+      position:absolute;
+      left:-10000px; top:auto; width:1px; height:1px; overflow:hidden;
+    }
+    .manual {
+      margin-top:.5rem; display:block;
+      color:#457bbf; text-decoration:none;
+    }
+    .manual:hover { color:#C5282F; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .pulse, .logo img { animation:none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap" role="main" aria-live="polite">
+    <section class="card" aria-label="Thank you">
+      <div class="pulse" aria-hidden="true"></div>
+
+      <div class="logo" aria-hidden="true">
+        <!-- Replace with your actual KRYSTAL logo path -->
+        <img src="/assets/logo.png" alt="KRYSTAL" />
+      </div>
+
+      <h1>Thank you — message received</h1>
+      <p class="lead">We’ll get back within 1–2 business days. Your details have been safely recorded.</p>
+
+      <p class="quote">“Every crystal begins as a spark — thank you for trusting KRYSTAL to shape yours.”</p>
+      <div class="accent" aria-hidden="true"></div>
+
+      <p class="note" id="redirectNote">Redirecting in <span id="sec">5</span>s… If not, <a class="manual" id="manualLink" href="/">click here</a>.</p>
+      <a class="sr-only" id="srLink" href="/">Skip waiting and continue</a>
+    </section>
+  </main>
+
+  <!-- Keep redirecting option (client-side, with graceful fallback link) -->
+  <script>
+    // Config
+    const redirectEnabled = true;       // keep redirecting option as requested
+    const redirectAfterSec = 10;  // seconds to wait before redirecting
+    const redirectTo = "/";
+
+    const note = document.getElementById("redirectNote");
+    const secEl = document.getElementById("sec");
+    const manual = document.getElementById("manualLink");
+    const sr = document.getElementById("srLink");
+
+    function go() { window.location.href = redirectTo; }
+
+    if (redirectEnabled) {
+      let t = redirectAfterSec;
+      secEl.textContent = t;
+      const timer = setInterval(() => {
+        t -= 1; secEl.textContent = t;
+        if (t <= 0) { clearInterval(timer); go(); }
+      }, 1000);
+    } else {
+      note.textContent = "You can continue.";
+    }
+
+    // Ensure manual links target the same destination
+    manual.href = redirectTo;
+    sr.href = redirectTo;
+  </script>
+</body>
+</html>
